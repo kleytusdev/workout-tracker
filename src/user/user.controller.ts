@@ -4,7 +4,7 @@ import { UserService } from './user.service';
 import { AuthGuard } from 'src/auth/auth.guard';
 
 @UseGuards(AuthGuard)
-@Controller('users')
+@Controller('users/')
 export class UserController {
   constructor(
     private userService: UserService
