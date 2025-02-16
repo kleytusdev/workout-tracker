@@ -5,8 +5,9 @@ import { AuthController } from '../controllers/auth.controller';
 import { SignUpUseCase } from 'src/auth/application/use-cases/sign-up.use-case';
 import { PrismaAuthRepository } from '../repositories/prisma/auth.repository';
 import { UserEntity } from '../entities/user.entity';
+import { SignInUseCase } from 'src/auth/application/use-cases/sign-in.use-case';
 
-const useCases = [SignUpUseCase];
+const useCases = [SignUpUseCase, SignInUseCase];
 
 const useCaseProviders = useCases.map(useCase => ({
   provide: useCase,
